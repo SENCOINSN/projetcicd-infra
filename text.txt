@@ -1,0 +1,5 @@
+postgres
+
+ DATASOURCE_URL: jdbc:postgresql://postgresql:5432/postgres
+  DATASOURCE_USERNAME: postgres
+  DATASOURCE_PASSWORD: adamaseye@
