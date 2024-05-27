@@ -20,6 +20,9 @@ spec:
         name: db
         env:
         - name: POSTGRES_PASSWORD
-          value: adamaseye@
+          valueFrom:
+            secretKeyRef:
+              name: backend-secret
+              key: password
         ports:
         - containerPort: 5432

@@ -1,0 +1,8 @@
+resources:
+- postgres-svc.yaml
+- postgres.yaml
+- backend-svc.yaml
+- backend-deploy.yaml
+
+
+

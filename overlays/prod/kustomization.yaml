@@ -1,0 +1,20 @@
+resources:
+- ../../base
+- namespace.yaml
+
+namespace: prod
+
+patches:
+- path: backend-svc-prod.yaml
+- path: backend-deploy-prod.yaml
+
+secretGenerator:
+- name: backend-secret
+  literals:
+  - password=houleyeseye@
+
+configMapGenerator:
+- name: backend-cm
+  literals:
+  - username=postgres
+  - url=jdbc:postgresql://postgresql:5432/postgres

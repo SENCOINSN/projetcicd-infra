@@ -1,0 +1,24 @@
+resources:
+- ../../base
+- adminer.yaml
+- adminer-svc.yaml
+- namespace.yaml
+
+namespace: dev
+
+patches:
+- path: backend-svc-dev.yaml
+- path: backend-deploy-dev.yaml
+
+secretGenerator:
+- name: backend-secret
+  literals:
+  - password=adamaseye@
+
+
+configMapGenerator:
+- name: backend-cm
+  literals:
+  - url=jdbc:postgresql://postgresql:5432/postgres
+  - username=postgres
+ 
